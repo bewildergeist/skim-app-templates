@@ -26,11 +26,11 @@ Any plain text formatted templates can be edited directly, and if you are comfor
 
 Check out the [Haml](http://haml-lang.com/) and [Sass documentation](http://sass-lang.com/) and you will quickly be able to grok the structure of the file. Haml and Sass significantly simplify HTML and CSS markup, respectively, and especially Haml's auto-closing of tags makes editing HTML much easier and less error-prone.
 
-To convert your edited .haml-file to HTML, first install the Haml gem if you haven't already by running this command on the command-line (in Terminal.app if you are on Mac OS X), typing your password when prompted:
+To convert your edited .haml-file to HTML, first install the Haml gem if you haven't already by running this command in Terminal.app, typing your password when prompted:
 
     sudo gem install haml
 
-Then navigate to the folder containing your .haml-file on the command-line (if you are on Mac OS X, optionally install [cdto](http://code.google.com/p/cdto/) to quickly open a Finder folder in Terminal.app) and convert it via the `haml` command-line utility:
+Then navigate to the folder containing your .haml-file on the command-line (optionally install [cdto](http://code.google.com/p/cdto/) to quickly open a Finder folder in Terminal.app) and convert it via the `haml` command-line utility:
 
     haml input.haml output.html
 
