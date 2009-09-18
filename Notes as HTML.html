@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Summary of <$fileName.lastPathComponent/></title>
+    <meta content='Theme by Dan Andrew Brendstrup' name='author' />
+    <meta content='18/09/2009' name='revised' />
+    <meta content='A theme for exported notes from Skim.app, an awesome PDF reader and note-taker for the Mac (available at skim-app.sourceforge.net).' name='description' />
+    <style type='text/css'>
+      /* First, a reset. */
+      html, body, div, cite, h1, a, blockquote {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline; }
+      
+      /* Then, styling. */
+      body {
+        font: 14px/1.5 "Georgia", serif;
+        background-color: #eee;
+        color: #333; }
+      
+      #container {
+        width: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+        display: inline-block; }
+      
+      #container {
+        display: block; }
+      
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 1em 0;
+        text-shadow: -1px 2px 2px #bbb; }
+      
+      a {
+        text-decoration: none;
+        color: #333; }
+        a:hover {
+          text-decoration: underline; }
+      
+      blockquote {
+        margin: 0 1em 1.5em 1em;
+        padding: 8px;
+        -webkit-box-shadow: -3px 3px 5px #bbb;
+        -webkit-border-radius: 6px; }
+      
+      .highlight {
+        border: 2px solid rgb(255, 211, 36);
+        background-color: rgb(255, 246, 191); }
+        .highlight cite {
+          color: rgb(255, 211, 36); }
+      
+      .note {
+        border: 2px solid rgb(198, 216, 128);
+        background-color: rgb(230, 239, 194); }
+        .note cite {
+          color: rgb(198, 216, 128); }
+      
+      .circle, .box, .underline, .line, .strike, .freehand {
+        border: 2px solid rgb(251, 194, 196);
+        background-color: rgb(251, 227, 228); }
+        .circle cite, .box cite, .underline cite, .line cite, .strike cite, .freehand cite {
+          color: rgb(251, 194, 196); }
+      
+      cite {
+        text-shadow: 0px 1px 0px #fff;
+        font-weight: bold;
+        float: right; }
+    </style>
+  </head>
+  <body>
+    <div id='container'>
+      <h1>Summary of <a href="<$fileURL/>" title="Open PDF file"><$fileName.lastPathComponent/></a></h1>
+      <$notes.@arraySortedByPageIndex>
+      <blockquote class='<$type.typeName.lowercaseString/>' title='<$type.typeName/>'><$string?><$string/></$string?><$text?>: <$text/></$text?><cite><$page.label?><$page.label/><?$page.label?><$pageIndex.numberByAddingOne/></$page.label?></cite></blockquote>
+      </$notes.@arraySortedByPageIndex>
+    </div>
+  </body>
+</html>
